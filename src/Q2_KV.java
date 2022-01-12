@@ -14,7 +14,7 @@ public class Q2_KV {
                 mp.get(arr.get(i)).add(i);
             }
             else {
-                mp.put(arr.get(i),new ArrayList(i));
+                mp.put(arr.get(i),new ArrayList(Arrays.asList(i)));
             }
         }
         boolean nodup=true;

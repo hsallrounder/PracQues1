@@ -9,17 +9,12 @@ public class Q2_KV {
         for(int i=0;i<n;i++) arr.add(sc.nextInt());
         sc.close();
         HashMap<Integer,ArrayList<Integer>> mp = new HashMap();
-        ArrayList<Integer> a;
         for(int i=0;i<arr.size();i++){
             if(mp.containsKey(arr.get(i))){
-                a=mp.get(arr.get(i));
-                a.add(i);
-                mp.replace(arr.get(i),mp.get(arr.get(i)),a);
+                mp.get(arr.get(i)).add(i);
             }
             else {
-                a=new ArrayList();
-                a.add(i);
-                mp.put(arr.get(i),a);
+                mp.put(arr.get(i),new ArrayList(i));
             }
         }
         boolean nodup=true;
